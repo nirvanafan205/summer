@@ -65,7 +65,7 @@ p {
 
 .background:not(:hover) {
     background-color: blue;
-  }
+}
 
 h1,
 h2,
@@ -74,7 +74,7 @@ h3 {
     font-weight: bold;
 }
 
-.classPoints{
+.classPoints {
     height: 40vh;
     width: 150%;
 }
@@ -90,4 +90,19 @@ h3 {
 
 .languageTools {
     background-color: steelblue;
+}
+
+.sectionName {
+    color: black;
+}
+
+li#resources::before {
+    display: inline-block;
+    /* Adjust the desired amount of spacing */
+    margin-right: 0.5rem;
+}
+
+li#resources #superSize {
+    font-size: 3.5rem; /* Adjust the desired size of the icon */
+    padding-bottom: 2rem;
 }
