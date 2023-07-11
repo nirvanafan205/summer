@@ -81,7 +81,7 @@ h3 {
 
 .languageTools {
     height: 40vh;
-    width: 275%;
+    width: 248.5%;
 }
 
 .classPoints {
@@ -103,6 +103,44 @@ li#resources::before {
 }
 
 li#resources #superSize {
-    font-size: 3.5rem; /* Adjust the desired size of the icon */
+    font-size: 3.5rem;
+    /* Adjust the desired size of the icon */
     padding-bottom: 2rem;
+}
+
+.gradient-line {
+    background: linear-gradient(to bottom, navy, steelblue);
+    width: 20px;
+    height: 40vh;
+}
+
+.divider {
+    width: 1920px;
+    height: 0.75vh;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+}
+
+p {
+    padding-top: 1rem;
+    padding-left: .5rem;
+}
+
+#navBar {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the desired spacing */
+}
+
+nav li:last-child {
+    margin-right: 0; /* Remove spacing for the last link */
 }
