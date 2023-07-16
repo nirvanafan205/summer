@@ -11,6 +11,11 @@ menuButton.addEventListener('click', function(event) {
 
   // Toggle the display of the dropdown content based on its current state
   dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+
+  // Close the sections if the dropdown menu is closed
+  if (dropdownContent.style.display === 'none') {
+    closeAllSections();
+  }
 });
 
 // Close the dropdown when clicking outside of it
@@ -20,6 +25,9 @@ window.addEventListener('click', function(event) {
     if (dropdownContent.style.display === 'block') {
       dropdownContent.style.display = 'none';
       menuButton.classList.remove('active');
+
+      // Close the sections when the dropdown menu is closed
+      closeAllSections();
     }
   }
 });
@@ -47,17 +55,6 @@ accordionHeaders.forEach(function(header) {
   });
 });
 
-// Get all the accordion contents
-var accordionContents = document.querySelectorAll('.accordion-content');
-
-// Loop through each accordion content
-accordionContents.forEach(function(content) {
-  // Add a click event listener to each content
-  content.addEventListener('click', function(event) {
-    event.stopPropagation(); // Stop the event from propagating to the accordion header
-  });
-});
-
 // Function to close other sections
 function closeOtherSections(currentHeader) {
   // Get all the accordion headers except the current one
@@ -70,10 +67,31 @@ function closeOtherSections(currentHeader) {
   });
 }
 
+// Function to close all sections
+function closeAllSections() {
+  // Get all the accordion headers
+  var allHeaders = document.querySelectorAll('.accordion-header');
+
+  // Loop through each header and close its associated content
+  allHeaders.forEach(function(header) {
+    var content = header.nextElementSibling;
+    content.style.display = 'none';
+    header.classList.remove('active-section');
+  });
+}
+
 // Close all accordion sections on page load
 window.addEventListener('load', function() {
   var accordionContents = document.querySelectorAll('.accordion-content');
   accordionContents.forEach(function(content) {
     content.style.display = 'none';
+  });
+});
+
+// Add click event listener to each accordion content
+var accordionContents = document.querySelectorAll('.accordion-content');
+accordionContents.forEach(function(content) {
+  content.addEventListener('click', function(event) {
+    event.stopPropagation();
   });
 });
