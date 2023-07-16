@@ -47,6 +47,17 @@ accordionHeaders.forEach(function(header) {
   });
 });
 
+// Get all the accordion contents
+var accordionContents = document.querySelectorAll('.accordion-content');
+
+// Loop through each accordion content
+accordionContents.forEach(function(content) {
+  // Add a click event listener to each content
+  content.addEventListener('click', function(event) {
+    event.stopPropagation(); // Stop the event from propagating to the accordion header
+  });
+});
+
 // Function to close other sections
 function closeOtherSections(currentHeader) {
   // Get all the accordion headers except the current one
