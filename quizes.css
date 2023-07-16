@@ -76,17 +76,6 @@ nav a:hover {
     color: var(--magenta);
 }
 
-/* Icon thingy for linkedin and github */
-nav [class*="fa-"] {
-    font-size: 150%;
-    color: var(--aqua);
-}
-
-nav h1 [class*="fa-"] {
-    font-size: 100%;
-    color: var(--aqua);
-}
-
 .button {
     background-color: var(--magenta);
     padding: 0.5rem;
@@ -121,20 +110,20 @@ nav h1 [class*="fa-"] {
     text-align: center;
 }
 
-
 /* Drop down menu */
-
 .dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25%; /* Adjust the height if needed */
+    height: 25%;
     margin: 0 auto;
-    min-height: 25vh; /* Ensure the dropdown fills the full height of the viewport */
+    min-height: 25vh;
+    width: 100px; /* Adjust the width as needed */
+    margin-top: 20px; /* Add top margin as needed */
+    margin-bottom: 20px; /* Add bottom margin as needed */
   }
+
   
-
-
 .dropdown-button {
     padding: 10px;
     background-color: #f1f1f1;
@@ -149,13 +138,14 @@ nav h1 [class*="fa-"] {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    min-width: 200px;
+    width: 50%; /* Make the content container width 100% */
     margin: auto;
     left: 0;
     right: 0;
     text-align: center;
     padding: 0;
-}
+  }
+
 
 .dropdown-section {
     border-bottom: 1px solid #ccc;
