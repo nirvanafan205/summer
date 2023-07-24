@@ -1,4 +1,3 @@
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
     --black: #171321;
     --dkblue: #0d314b;
@@ -23,172 +22,135 @@ html {
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--sans);
-    background-color: var(--plum);
-    color: var(--white);
-    font-size: var(--font-size);
-    line-height: 1.5;
-}
-
-#welcome {
-    text-align: center;
-    padding-top: .5rem;
-    color: var(--hotmag);
-}
-
-.background {
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    /* Centers the block horizontally */
-    background-color: blue;
-    transition: background-color 3s ease;
-}
-
-p {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin-bottom: 1rem;
-    font-family: var(--sans);
-    font-size: 1rem;
-}
-
-.background:hover {
-    background-color: black;
-    transition: background-color 3s ease;
-}
-
-.background:not(:hover) {
-    background-color: blue;
-}
-
-h1,
-h2,
-h3 {
-    font-family: var(--sans);
-    font-weight: bold;
-}
-
-.classPoints {
-    height: 40vh;
-    width: 150%;
-}
-
-.languageTools {
-    height: 40vh;
-    width: 248.5%;
-}
-
-.classPoints {
-    background-color: navy;
-}
-
-.languageTools {
-    background-color: steelblue;
-}
-
-.sectionName {
-    color: black;
-}
-
-li#resources::before {
-    display: inline-block;
-    /* Adjust the desired amount of spacing */
-    margin-right: 0.5rem;
-}
-
-li#resources #superSize {
-    font-size: 3.5rem;
-    /* Adjust the desired size of the icon */
-    padding-bottom: 2rem;
-}
-
-.gradient-line {
-    background: linear-gradient(to bottom, navy, steelblue);
-    width: 20px;
-    height: 40vh;
-}
-
-.divider {
-    width: 1920px;
-    height: 0.75vh;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
-}
-
-p {
-    padding-top: 1rem;
-    padding-left: .5rem;
-}
-
-#navBar {
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background-color: var(--plum);
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 10px; /* Adjust the desired spacing */
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--dkblue);
 }
 
-nav li:last-child {
-    margin-right: 0; /* Remove spacing for the last link */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Add flex-wrap to prevent items from stretching */
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.about,
+.tools {
+    flex-basis: 45%;
+    margin-bottom: 20px; /* Add margin between sections */
+    padding: 20px; /* Add padding to create space within the sections */
+    background-color: var(--hotmag);
+    border: 5px solid var(--white);
+    border-radius: 10px;
+}
+
+.about h2,
+.tools h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--aqua);
+    max-width: 325px;
+    margin: 0 auto;
+    margin-top: 20px; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Gradient line on the header's border at the bottom */
+.gradient {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    height: 6px;
+    width: 100%;
+}
+
+/* Media query for screens with a maximum width of 768px (e.g., tablets and mobile phones) */
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .about,
+    .tools {
+        flex-basis: 100%; /* Each section takes full width on smaller screens */
+        border-radius: 10px; /* rounded corners */
+    }
+
+    /* Reduce the gradient line height on smaller screens */
+    .gradient {
+        height: 2px;
+    }
+}
+
+
+
+/* Navigation bar */
 nav {
     font-family: var(--mono);
-    font-size: 80%;
+    font-size: 125%;
     padding: 1rem;
+    text-align: center; /* Center the navigation bar */
 }
 
-nav h1 a {
-    font-family: var(--sans);
-    text-align: center;
-}
-
-/* navbar organizing */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    /* puts all links together */
-    flex-flow: row wrap;
-    justify-content: center;
-    /* centers everything in the row */
-    align-items: center;
+    justify-content: center; /* Center the list items */
     gap: 2rem;
-    /* puts gaps between each elements */
 }
 
-nav li:first-child {
-    flex-basis: 100%;
-    /* pushes name to it's own line */
-    text-align: center;
+nav li {
+    display: inline-block; /* Display the list items in a line */
 }
 
 nav a {
     color: var(--white);
     text-decoration: none;
-    display: block;
-    /* makes area clickable */
-
 }
 
 nav a:hover {
     color: var(--magenta);
 }
 
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
 
 .button {
     background-color: var(--magenta);
@@ -212,8 +174,14 @@ nav a:hover {
         /* centers */
     }
 
-    nav li:first-child {
-        flex-basis: auto;
+    nav li {
+        flex-basis: auto; /* Reset the flex-basis for list items to be inline */
+        text-align: left; /* Align the list items to the left */
+        margin-right: 2rem; /* Add margin between the list items */
+    }
+
+    nav li:last-child {
+        margin-right: 0; /* Remove margin for the last list item */
     }
 }
 
