@@ -25,7 +25,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--sans);
-    background-color: var(--black);
+    background-color: navy;
     color: var(--white);
     font-size: var(--font-size);
     line-height: 1.5;
@@ -136,4 +136,40 @@ nav h1 [class*="fa-"] {
 
 video {
     display: block;
+}
+
+/* first section stuff */
+.lab1Color {
+    background-color: var(--dkblue);
+}
+
+#lab1 h2 {
+    font-size: 2.5;
+    margin-bottom: calc(2.5rem * 1.5rem);
+}
+
+#lab1 h3 {
+    color: var(--aqua);
+}
+
+#lab1 h4 {
+    font-size: 1rem;
+    font-style: var(--mono);
+    margin: 0;
+}
+
+.blackBox {
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* other */
+
+#lab1 {
+    padding: 4rem 1rem;
 }
