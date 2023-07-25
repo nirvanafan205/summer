@@ -120,12 +120,10 @@ nav a:hover {
     min-height: 25vh;
     width: 100px;
     /* Adjust the width as needed */
-    margin-top: 20px;
+    margin-top: 100px;
     /* Add top margin as needed */
-    margin-bottom: 20px;
     /* Add bottom margin as needed */
 }
-
 
 .dropdown-button {
     padding: 10px;
@@ -149,7 +147,6 @@ nav a:hover {
     text-align: center;
     padding: 0;
 }
-
 
 .dropdown-section {
     border-bottom: 1px solid #ccc;
@@ -190,4 +187,36 @@ nav a:hover {
     background: rgb(63, 94, 251);
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     height: 3px;
+}
+
+/* Quizes */
+#statement {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px gray;
+    padding: 1rem;
+    font-size: x-large;
+    text-align: center;
+    margin: 1rem 0px;
+    min-height: 2em;
+}
+#explanation {
+    padding: 1rem;
+    text-align: center;
+}
+#options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    padding: 0.5rem;
+    font-size: medium;
+    border-radius: 5px;
+}
+.correct {
+    background-color: lightgreen;
+}
+.incorrect {
+    background-color: lightpink;
 }
