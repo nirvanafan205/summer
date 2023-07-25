@@ -25,9 +25,9 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--sans);
-    background-color: navy;
     color: var(--white);
     font-size: var(--font-size);
+    background-color: navy;
     line-height: 1.5;
 }
 
@@ -36,6 +36,7 @@ nav {
     font-family: var(--mono);
     font-size: 80%;
     padding: 1rem;
+    background-color: navy;
 }
 
 nav h1 a {
@@ -127,20 +128,12 @@ nav h1 [class*="fa-"] {
     height: 3px;
 }
 
-/* video stuff */
-.video-container {
-    border-radius: 20px; /* Adjust the value to change the corner radius */
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
 
-video {
-    display: block;
-}
 
 /* first section stuff */
 .lab1Color {
     background-color: var(--dkblue);
+
 }
 
 #lab1 h2 {
@@ -148,9 +141,15 @@ video {
     margin-bottom: calc(2.5rem * 1.5rem);
 }
 
-#lab1 h3 {
+#lab1 a {
     color: var(--aqua);
+    text-decoration: none;
 }
+
+#lab1 a:hover {
+    color: var(--plum);
+}
+
 
 #lab1 h4 {
     font-size: 1rem;
@@ -165,11 +164,62 @@ video {
     color: var(--white);
     font-size: 1rem;
     line-height: 1.5;
+
 }
 
+#lab1 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#lab1 img {
+    margin: 2rem 0 4rem 0;
+    border-left: 1px solid var(--aqua) ;
+    border-top: 1px solid var(--aqua) ;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+/* which styles take priority */
+@media (min-width: 550px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr); /* we have two columns, they will be 1 fraction of the screen each */
+        gap: 1rem;
+    }
+
+    .text {
+        grid-column: 5/11; /* stretches text */
+        grid-row: 1/2;
+        order: 2;
+        text-align: right;
+    }
+
+    #lab1 img {
+        grid-column: 1/6; /*  */
+        grid-row: 1/2;
+    }
+
+    #lab1 ul {
+        justify-content: flex-end;
+    }
+}
+
+img {
+    width: 100%;
+}
 
 /* other */
 
 #lab1 {
-    padding: 4rem 1rem;
+    padding: 6.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
