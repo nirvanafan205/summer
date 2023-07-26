@@ -27,7 +27,7 @@ body {
     font-family: var(--sans);
     color: var(--white);
     font-size: var(--font-size);
-    background-color: navy;
+    background-color: var(--black);
     line-height: 1.5;
 }
 
@@ -36,7 +36,6 @@ nav {
     font-family: var(--mono);
     font-size: 80%;
     padding: 1rem;
-    background-color: navy;
 }
 
 nav h1 a {
@@ -123,8 +122,8 @@ nav h1 [class*="fa-"] {
 }
 
 .gradient {
-    background: rgb(135,37,190);
-    background: linear-gradient(0deg, rgba(135,37,190,1) 14%, rgba(133,38,198,1) 41%, rgba(167,12,12,1) 62%, rgba(144,29,136,1) 100%); 
+    background: rgb(135, 37, 190);
+    background: linear-gradient(0deg, rgba(135, 37, 190, 1) 14%, rgba(133, 38, 198, 1) 41%, rgba(167, 12, 12, 1) 62%, rgba(144, 29, 136, 1) 100%);
     height: 3px;
 }
 
@@ -180,8 +179,8 @@ nav h1 [class*="fa-"] {
 
 #lab1 img {
     margin: 2rem 0 4rem 0;
-    border-left: 1px solid var(--aqua) ;
-    border-top: 1px solid var(--aqua) ;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
     border-radius: 25px;
     padding: 1rem;
 }
@@ -190,19 +189,22 @@ nav h1 [class*="fa-"] {
 @media (min-width: 550px) {
     article {
         display: grid;
-        grid-template-columns: repeat(10, 1fr); /* we have two columns, they will be 1 fraction of the screen each */
+        grid-template-columns: repeat(10, 1fr);
+        /* we have two columns, they will be 1 fraction of the screen each */
         gap: 1rem;
     }
 
     .text {
-        grid-column: 5/11; /* stretches text */
+        grid-column: 5/11;
+        /* stretches text */
         grid-row: 1/2;
         order: 2;
         text-align: right;
     }
 
     #lab1 img {
-        grid-column: 1/6; /*  */
+        grid-column: 1/6;
+        /*  */
         grid-row: 1/2;
     }
 
@@ -218,8 +220,125 @@ img {
 /* other */
 
 #lab1 {
-    padding: 6.5rem 1rem;
+    padding: 2.5rem 1rem;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+}
+
+
+/* second section stuff */
+.lab2Color {
+    background-color: indigo;
+
+}
+
+#lab2 h2 {
+    font-size: 2.5;
+    margin-bottom: calc(2.5rem * 1.5rem);
+}
+
+#lab2 a {
+    color: var(--aqua);
+    text-decoration: none;
+}
+
+#lab2 a:hover {
+    color: var(--plum);
+}
+
+
+#lab2 h4 {
+    font-size: 1rem;
+    font-style: var(--mono);
+    margin: 0;
+}
+
+.blackBox {
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
+
+#lab2 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#lab2 img {
+    margin: 2rem 0 4rem 0;
+    border-right: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+/* which styles take priority */
+@media (min-width: 800px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        /* we have two columns, they will be 1 fraction of the screen each */
+        gap: 1rem;
+    }
+
+    #lab2 ul {
+        justify-content: flex-end;
+    }
+
+    #lab2 .reverse .text {
+        grid-column: 1/7;
+        order: 2;
+        text-align: left;
+    }
+
+    #lab2 .reverse img {
+        grid-column: 7/11;
+    }
+
+    #lab2 .reverse ul {
+        justify-content: flex-start;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+#lab2 {
+    padding: 2.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* other */
+
+.picSize {
+    width: 650px;
+    height: 650px;
+}
+
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
 }
