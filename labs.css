@@ -75,12 +75,7 @@ nav a:hover {
     color: var(--magenta);
 }
 
-/* Icon thingy for linkedin and github */
-nav [class*="fa-"] {
-    font-size: 150%;
-    color: var(--aqua);
-}
-
+/* Icon thingy for font awesome */
 nav h1 [class*="fa-"] {
     font-size: 100%;
     color: var(--aqua);
@@ -312,10 +307,12 @@ img {
 }
 
 #lab2 {
+    opacity: 0;
     padding: 2.5rem 1rem;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    transition: opacity 1s ease-in-out;
 }
 
 /* other */
@@ -335,43 +332,6 @@ img {
         text-align: left;
         margin-right: auto;
     }
-}
-
-/* Define the fade-out animation for lab1 */
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-/* Apply the fade-in and fade-out transitions to the lab2 section */
-#lab2 {
-    padding: 2.5rem 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    opacity: 0;
-    /* Set initial opacity to 0 */
-    transition: opacity 1s ease-in-out;
-    /* Add CSS transition for smooth fade-in/out */
-}
-
-/* Apply the fade-in effect when the user hovers over lab2 section */
-#lab2:hover {
-    opacity: 1;
-    /* Change opacity to 1 on hover */
-}
-
-/* Apply the fade-out effect when the user hovers out of the lab2 section */
-#lab2:hover~#lab1:not(:hover) {
-    animation: fadeOut 2s ease-in-out;
-    /* Adjust the duration as needed */
-    pointer-events: none;
-    /* Disable pointer events during the fade-out animation */
 }
 
 @media (max-width: 600px) {
