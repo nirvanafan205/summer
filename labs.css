@@ -69,7 +69,6 @@ nav a {
     text-decoration: none;
     display: block;
     /* makes area clickable */
-
 }
 
 nav a:hover {
@@ -121,23 +120,21 @@ nav h1 [class*="fa-"] {
     text-align: center;
 }
 
+.gradientNav {
+        background: rgb(63, 94, 251);
+        background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        height: 3px;
+}
+
 .gradient {
     background: rgb(135, 37, 190);
     background: linear-gradient(0deg, rgba(135, 37, 190, 1) 14%, rgba(133, 38, 198, 1) 41%, rgba(167, 12, 12, 1) 62%, rgba(144, 29, 136, 1) 100%);
     height: 3px;
 }
 
-
-
 /* first section stuff */
 .lab1Color {
     background-color: var(--dkblue);
-
-}
-
-#lab1 h2 {
-    font-size: 2.5;
-    margin-bottom: calc(2.5rem * 1.5rem);
 }
 
 #lab1 a {
@@ -148,7 +145,6 @@ nav h1 [class*="fa-"] {
 #lab1 a:hover {
     color: var(--plum);
 }
-
 
 #lab1 h4 {
     font-size: 1rem;
@@ -163,7 +159,6 @@ nav h1 [class*="fa-"] {
     color: var(--white);
     font-size: 1rem;
     line-height: 1.5;
-
 }
 
 #lab1 ul {
@@ -218,14 +213,12 @@ img {
 }
 
 /* other */
-
 #lab1 {
     padding: 2.5rem 1rem;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
 }
-
 
 /* second section stuff */
 .lab2Color {
@@ -261,7 +254,6 @@ img {
     color: var(--white);
     font-size: 1rem;
     line-height: 1.5;
-
 }
 
 #lab2 ul {
@@ -323,12 +315,10 @@ img {
 }
 
 /* other */
-
 .picSize {
     width: 650px;
     height: 650px;
 }
-
 
 @media (min-width: 850px) {
     nav {
@@ -341,4 +331,41 @@ img {
         text-align: left;
         margin-right: auto;
     }
+}
+
+/* Apply the fade-in and fade-out transitions to the lab2 section */
+#lab2 {
+    padding: 2.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 3s ease-in-out;
+    /* Add CSS transition for smooth fade-in/out */
+}
+
+/* Apply the fade-in effect when the user hovers over lab2 section */
+#lab2:hover {
+    opacity: 1;
+    /* Change opacity to 1 on hover */
+}
+
+/* Define the fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Apply the fade-out effect when the user hovers out of the lab2 section */
+#lab1:hover~#lab2:not(:hover) {
+    animation: fadeOut 1s ease-in-out;
+    /* Adjust the duration as needed */
+    pointer-events: none;
+    /* Disable pointer events during the fade-out animation */
 }
