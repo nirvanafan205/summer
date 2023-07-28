@@ -42,7 +42,8 @@ h1 {
 
 .flex-container {
     display: flex;
-    flex-wrap: wrap; /* Add flex-wrap to prevent items from stretching */
+    flex-wrap: wrap;
+    /* Add flex-wrap to prevent items from stretching */
     justify-content: space-around;
     padding-top: 20px;
 }
@@ -50,8 +51,10 @@ h1 {
 .about,
 .tools {
     flex-basis: 45%;
-    margin-bottom: 20px; /* Add margin between sections */
-    padding: 20px; /* Add padding to create space within the sections */
+    margin-bottom: 20px;
+    /* Add margin between sections */
+    padding: 20px;
+    /* Add padding to create space within the sections */
     background-color: var(--hotmag);
     border: 5px solid var(--white);
     border-radius: 10px;
@@ -75,9 +78,9 @@ footer {
     background-color: var(--aqua);
     max-width: 325px;
     margin: 0 auto;
-    margin-top: 20px; 
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    margin-top: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
 }
 
 footer p {
@@ -95,13 +98,16 @@ footer p {
 /* Media query for screens with a maximum width of 768px (e.g., tablets and mobile phones) */
 @media screen and (max-width: 768px) {
     .flex-container {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
+        flex-direction: column;
+        /* Stack sections vertically on smaller screens */
     }
 
     .about,
     .tools {
-        flex-basis: 100%; /* Each section takes full width on smaller screens */
-        border-radius: 10px; /* rounded corners */
+        flex-basis: 100%;
+        /* Each section takes full width on smaller screens */
+        border-radius: 10px;
+        /* rounded corners */
     }
 
     /* Reduce the gradient line height on smaller screens */
@@ -110,14 +116,13 @@ footer p {
     }
 }
 
-
-
 /* Navigation bar */
 nav {
     font-family: var(--mono);
     font-size: 125%;
     padding: 1rem;
-    text-align: center; /* Center the navigation bar */
+    text-align: center;
+    /* Center the navigation bar */
 }
 
 nav ul {
@@ -125,12 +130,14 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center the list items */
+    justify-content: center;
+    /* Center the list items */
     gap: 2rem;
 }
 
 nav li {
-    display: inline-block; /* Display the list items in a line */
+    display: inline-block;
+    /* Display the list items in a line */
 }
 
 nav a {
@@ -140,16 +147,6 @@ nav a {
 
 nav a:hover {
     color: var(--magenta);
-}
-
-nav [class*="fa-"] {
-    font-size: 150%;
-    color: var(--aqua);
-}
-
-nav h1 [class*="fa-"] {
-    font-size: 100%;
-    color: var(--aqua);
 }
 
 .button {
@@ -175,17 +172,43 @@ nav h1 [class*="fa-"] {
     }
 
     nav li {
-        flex-basis: auto; /* Reset the flex-basis for list items to be inline */
-        text-align: left; /* Align the list items to the left */
-        margin-right: 2rem; /* Add margin between the list items */
+        flex-basis: auto;
+        /* Reset the flex-basis for list items to be inline */
+        text-align: left;
+        /* Align the list items to the left */
+        margin-right: 2rem;
+        /* Add margin between the list items */
     }
 
     nav li:last-child {
-        margin-right: 0; /* Remove margin for the last list item */
+        margin-right: 0;
+        /* Remove margin for the last list item */
     }
 }
 
-.end {
-    padding: 1rem;
-    text-align: center;
+#footerColor {
+    background-color: var(--aqua);
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    /* puts all links together */
+    flex-flow: row wrap;
+    justify-content: center;
+    /* centers everything in the row */
+    align-items: center;
+    /* puts gaps between each elements */
+    gap: 2rem;
+    font-size: 3rem;
+}
+
+span {
+    color: rebeccapurple;
+}
+
+footer ul span:hover {
+    color: seagreen;
 }
