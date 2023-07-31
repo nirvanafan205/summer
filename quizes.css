@@ -199,6 +199,7 @@ nav a:hover {
     text-align: center;
     margin: 1rem 0px;
     min-height: 2em;
+    color: black;
 }
 #explanation {
     padding: 1rem;
