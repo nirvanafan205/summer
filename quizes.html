@@ -41,15 +41,26 @@
                 <button class="accordion-header">Quiz 1</button>
                 <div class="accordion-content">
 
+                    <div id="scoreboard">Score: <span id="score">0</span></div>
                     <div id="statement">
 
                     </div>
 
                     <div id="options">
+                        <!-- Questions with two options -->
                         <button name="UDP" value="UDP">UDP</button>
                         <button name="TCP" value="TCP">TCP</button>
+
+                        <!-- Questions with 5 options -->
+                        <button name="Data Payload" value="Data Payload">Data Payload</button>
+                        <button name="IP Protocol Header" value="IP Protocol Header">IP Protocol Header</button>
+                        <button name="Frame Header" value="Frame Header">Frame Header</button>
+                        <button name="TCP Protocol Header" value="TCP Protocol Header">TCP Protocol Header</button>
+                        <button name="Frame Trailer" value="Frame Trailer">Frame Trailer</button>
+
                     </div>
 
+                    <button id="nextButton" disabled>NextQuestion</button>
                     <div id="explanation">
 
                     </div>

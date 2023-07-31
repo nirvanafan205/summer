@@ -219,6 +219,11 @@ button {
 .correct {
     background-color: lightgreen;
 }
+
 .incorrect {
     background-color: lightpink;
+}
+
+#scoreboard {
+    color: violet;
 }
