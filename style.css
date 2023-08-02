@@ -60,6 +60,16 @@ h1 {
     border-radius: 10px;
 }
 
+.tools {
+    display: flex; /* Add flex display to make the ul elements display next to each other */
+    justify-content: space-between; /* Add space between the ul elements */
+}
+
+.tools ul {
+    margin-top: 75px;
+    margin-right: 100px;
+}
+
 .about h2,
 .tools h2 {
     font-size: 24px;
