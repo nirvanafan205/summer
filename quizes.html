@@ -41,69 +41,57 @@
                 <button class="accordion-header">Quiz 1</button>
                 <div class="accordion-content">
 
+                    <div id="scoreboard">Score: <span id="score">0</span></div>
                     <div id="statement">
 
                     </div>
 
                     <div id="options">
-                        <button name="true" value="true">true</button>
-                        <button name="false" value="false">false</button>
+                        <!-- Questions with two options -->
+                        <button name="UDP" value="UDP">UDP</button>
+                        <button name="TCP" value="TCP">TCP</button>
+
+                        <!-- Questions with 5 options -->
+                        <button name="Data Payload" value="Data Payload">Data Payload</button>
+                        <button name="IP Protocol Header" value="IP Protocol Header">IP Protocol Header</button>
+                        <button name="Frame Header" value="Frame Header">Frame Header</button>
+                        <button name="TCP Protocol Header" value="TCP Protocol Header">TCP Protocol Header</button>
+                        <button name="Frame Trailer" value="Frame Trailer">Frame Trailer</button>
+
+                        <!-- New set of 5 questions -->
+                        <button value="OK: successful HTTP request"></button>
+                        <button value="Requested file not found"></button>
+                        <button value="Server crashed"></button>
+                        <button value="Server has been hacked"></button>
+                        <button value="You have the file already (in local cache)"></button>
+
+                        <!-- New question -->
+                        <button value="0a:00:27:00:00:06"></button>
+                        <button value="130.166.42.100"></button>
+                        <button value="80"></button>
+
+
+                        <!-- Final question -->
+                        <button value="Specific host on a given network"></button>
+                        <button value="City"></button>
+                        <button value="Geographic region"></button>
+                        <button value="Manufacturer"></button>
+                        <button value="Serial Number"></button>
+                        <button value="Receiving application"></button>
+                        <button value="Subnet"></button>
                     </div>
 
+                    <button id="nextButton" disabled>NextQuestion</button>
                     <div id="explanation">
 
                     </div>
                 </div>
             </div> <!--- End of first quiz -->
-
-            <!-- Quiz 2-->
-            <div class="dropdown-section">
-                <button class="accordion-header">Quiz 2</button>
-                <div class="accordion-content">
-                    <div id="statement">
-                    </div>
-                    <div id="options">
-                        <button name="true" value="true">true</button>
-                        <button name="false" value="false">false</button>
-                    </div>
-                    <div id="explanation">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quiz 3-->
-            <div class="dropdown-section">
-                <button class="accordion-header">Quiz 3</button>
-                <div class="accordion-content">
-                    <div id="statement">
-                    </div>
-                    <div id="options">
-                        <button name="true" value="true">true</button>
-                        <button name="false" value="false">false</button>
-                    </div>
-                    <div id="explanation">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quiz 4-->
-            <div class="dropdown-section">
-                <button class="accordion-header">Quiz 4</button>
-                <div class="accordion-content">
-                    <div id="statement">
-                    </div>
-                    <div id="options">
-                        <button name="true" value="true">true</button>
-                        <button name="false" value="false">false</button>
-                    </div>
-                    <div id="explanation">
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
     <script src="AccordionMenu.js"></script>
+    <script src="quizes.js"></script>
 </body>
 
 </html>
