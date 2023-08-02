@@ -120,7 +120,7 @@ nav a:hover {
     min-height: 25vh;
     width: 100px;
     /* Adjust the width as needed */
-    margin-top: 100px;
+    margin-top: 225px;
     /* Add top margin as needed */
     /* Add bottom margin as needed */
 }
@@ -201,21 +201,25 @@ nav a:hover {
     min-height: 2em;
     color: black;
 }
+
 #explanation {
     padding: 1rem;
     text-align: center;
     color: black;
 }
+
 #options {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 button {
     padding: 0.5rem;
     font-size: medium;
     border-radius: 5px;
 }
+
 .correct {
     background-color: lightgreen;
 }
@@ -226,4 +230,20 @@ button {
 
 #scoreboard {
     color: violet;
+}
+
+/* New responsive styles for mobile devices */
+@media (max-width: 600px) {
+    #statement {
+        font-size: large;
+    }
+
+    #explanation {
+        font-size: small;
+    }
+
+    button {
+        font-size: small;
+        margin: 0.5rem 0;
+    }
 }
