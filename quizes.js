@@ -40,7 +40,7 @@ const facts = [
       "Which part of a network frame contains an entry indicating how many hops until the packet dies?",
     answer: "IP Protocol Header",
     explanation:
-      "The TCP protocol header contains the 'ACK#' field, which is used to acknowledge the receipt of a packet in a network frame.",
+      "IP Protocol Header contains information related to the IP layer of the OSI model. One of the fields within the IP Protocol Header is the Time to Live field. The TTL field indicates the maximum number of hops (routers) that a packet can traverse before it is discarded.",
     options: [
       "Data Payload",
       "IP Protocol Header",
@@ -56,7 +56,7 @@ const facts = [
       "Which part of a network frame contains the HTML document returned by a web server (in response to a page request)? ",
     answer: "Data Payload",
     explanation:
-      "The Data Payload contains the actual data being transmitted over the network.",
+      "When data is sent over a network, it is encapsulated in frames. The frame's TCP Protocol Header contains the Destination Port field, which allows the receiving device to determine which application should receive and process the data.",
     options: [
       "Data Payload",
       "IP Protocol Header",
@@ -136,7 +136,7 @@ const facts = [
       "Which part of a newwork frame is usually comprised of silenece (neigheter 0s nor 1s)?",
     answer: "Frame Trailer",
     explanation:
-      "The Data Payload contains the actual data being transmitted over the network.",
+      "Since the Frame Trailer is used for error checking and doesn't carry actual data, it is usually made up of bits with no specific information (neither 0s nor 1s).",
     options: [
       "Data Payload",
       "IP Protocol Header",
@@ -152,7 +152,7 @@ const facts = [
       "Which part of a network frame contains the source and destination MAC addresses",
     answer: "Frame Header",
     explanation:
-      "The Data Payload contains the actual data being transmitted over the network.",
+      "The Frame Header is responsible for providing essential addressing information, enabling the proper routing and delivery of the data frame to the intended destination.",
     options: [
       "Data Payload",
       "IP Protocol Header",
